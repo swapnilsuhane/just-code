@@ -11,6 +11,7 @@
     <modules>
         <module>ds-algo</module>
         <module>web</module>
+        <module>code-design</module>
     </modules>
 
     <properties>
