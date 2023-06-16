@@ -8,7 +8,6 @@ class MostPopularImplTest {
 
     @Test
     void testMostPopular() {
-        MostPopular popularityTracker = new MostPopularImpl();
         popularityTracker.increasePopularity(7);
         popularityTracker.increasePopularity(7);
         popularityTracker.increasePopularity(8);
@@ -27,7 +26,6 @@ class MostPopularImplTest {
 
     @Test
     void testMostPopular2() {
-        MostPopular popularityTracker = new MostPopularImpl();
         popularityTracker.increasePopularity(7);
         popularityTracker.increasePopularity(7);
         popularityTracker.increasePopularity(8);
