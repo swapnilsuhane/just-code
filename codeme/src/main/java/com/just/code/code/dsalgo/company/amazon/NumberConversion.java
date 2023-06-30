@@ -1,4 +1,4 @@
-package com.just.code.code.dsalgo.company.amazon;
+package dsalgo.company.amazon;
 
 public class NumberConversion {
     /*
