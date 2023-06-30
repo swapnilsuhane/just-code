@@ -1,6 +1,6 @@
-package com.just.code.code.dsalgo.company.amazon;
+package dsalgo.company.tittok;
 
-public class Solution {
+public class FixRobotInFactoryWithMinSumDist {
     static int[] rLoc;
     static int[][] factories;
     static int minCost = Integer.MAX_VALUE;

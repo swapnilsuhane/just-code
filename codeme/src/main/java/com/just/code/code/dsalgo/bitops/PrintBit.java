@@ -1,4 +1,4 @@
-package com.just.code.code.dsalgo.bitops;
+package dsalgo.bitops;
 
 public class PrintBit {
 
