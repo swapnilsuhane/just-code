@@ -1,4 +1,4 @@
-package web.start;
+package com.just.code.web.start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,5 +1,7 @@
 package dsalgo.company.atlassian;
 
+import com.just.code.dsalgo.company.atlassian.MostPopular;
+import com.just.code.dsalgo.company.atlassian.MostPopularImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

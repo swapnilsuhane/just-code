@@ -1,4 +1,4 @@
-package dsalgo.company.atlassian;
+package com.just.code.dsalgo.company.atlassian;
 
 import java.util.*;
 

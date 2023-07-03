@@ -1,4 +1,4 @@
-package dsalgo.graph;
+package com.just.code.dsalgo.graph;
 
 import java.util.*;
 

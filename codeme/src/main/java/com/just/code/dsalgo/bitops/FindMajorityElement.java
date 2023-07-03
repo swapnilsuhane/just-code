@@ -1,4 +1,4 @@
-package dsalgo.bitops;
+package com.just.code.dsalgo.bitops;
 
 public class FindMajorityElement {
 

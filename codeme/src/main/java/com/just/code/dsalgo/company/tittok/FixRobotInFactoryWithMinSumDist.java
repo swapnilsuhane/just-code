@@ -1,4 +1,4 @@
-package dsalgo.company.tittok;
+package com.just.code.dsalgo.company.tittok;
 
 public class FixRobotInFactoryWithMinSumDist {
     static int[] rLoc;
@@ -30,35 +30,30 @@ it is guaranteed that all robots can be repaired in the given input.
     public static int getMinSumToRepair(int[] robots, int[][] facts) {
         rLoc = robots;
         factories = facts;
-        dp(0, 0,0,0, factories);
+        dp(0,0, 0, factories);
         return minCost;
     }
 
-    private static void dp(int r, int fixed, int f, int cost, int[][] updatedFac) {
-        if(r == rLoc.length && fixed == rLoc.length) {
+    private static void dp(int r, int f, int cost, int[][] updatedFac) {
+        if(r == rLoc.length) {
             minCost = Math.min(minCost, cost);
             return;
         }
-        if(r >= rLoc.length || f >= factories.length) {
-            return;
-        }
-        for(int[] fac : updatedFac) {
-            int cap = factories[f][1];
-            if (cap > 0) {
-                int dist = Math.abs(rLoc[r] - factories[f][0]);
-                updatedFac[f][1]--;
-                dp(r + 1, fixed + 1, f + 1, cost + dist, updatedFac);
-                updatedFac[f][1]++;
-                dp(r + 1, fixed, f, cost, updatedFac);
+        for(int i=f; i<updatedFac.length; i++) {
+            if (updatedFac[i][1] > 0) {
+                int dist = Math.abs(rLoc[r] - updatedFac[i][0]);
+                int[][] newFac = updatedFac;
+                newFac[i][1]--;
+                dp(r + 1, f,cost + dist, newFac);
+                newFac[i][1]++;
+                dp(r , f+1, cost, updatedFac);
             }
         }
     }
 
-
-
     public static void main(String[] args) {
         int[] robots = {2,6};
-        int[][] fac = new int[][] {{4,2}};
+        int[][] fac = new int[][] {{4,2},{3,2},{2,1},{5,1}};
         int minSumToRepair = getMinSumToRepair(robots, fac);
         System.out.println(minSumToRepair);
     }
