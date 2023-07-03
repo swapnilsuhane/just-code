@@ -1,11 +1,10 @@
-package dsalgo.company.atlassian;
+package com.just.code.dsalgo.company.atlassian;
 
-import com.just.code.dsalgo.company.atlassian.MostPopularImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class MostPopularImplTest {
-    MostPopularImpl popularityTracker = new MostPopularImpl();
+    MostPopular popularityTracker = new MostPopularImpl();
 
     @Test
     void testMostPopular() {
