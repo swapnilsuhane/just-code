@@ -3,7 +3,9 @@ package com.just.code.dsalgo.company.atlassian;
 import java.util.*;
 
 public class MostPopularImpl implements MostPopular {
+    //freq, set of contentIds
     TreeMap<Integer, Set<Integer>> orderMap = new TreeMap<>();
+    //contentId, freq
     Map<Integer, Integer> contentCountMap = new HashMap<>();
 
     @Override
