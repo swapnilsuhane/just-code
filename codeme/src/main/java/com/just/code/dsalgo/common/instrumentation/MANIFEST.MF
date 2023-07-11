@@ -1,0 +1,1 @@
+Premain-class: com.just.code.dsalgo.common.instrumentation.InstrumentationAgent

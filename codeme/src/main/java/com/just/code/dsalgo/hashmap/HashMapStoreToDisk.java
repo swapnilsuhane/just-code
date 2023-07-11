@@ -1,10 +1,12 @@
 package com.just.code.dsalgo.hashmap;
 
+import com.just.code.dsalgo.common.serialize.ObjectSerializer;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashMap;
 
@@ -12,7 +14,7 @@ public class HashMapStoreToDisk {
     HashMap<Long, User> map = new HashMap<>();
 
     public void storeHashMap() {
-        for (long i = 0; i < 1000_000_000; i++) {
+        for (long i = 0; i < 1000_00; i++) {
             map.put(i, User.builder()
                     .name("swapnil")
                     .id(i)
@@ -27,7 +29,7 @@ public class HashMapStoreToDisk {
     @RequiredArgsConstructor
     @AllArgsConstructor
     @Data
-    static class User {
+    static class User implements Serializable {
         String name;
         Long id;
         String email;
@@ -41,5 +43,10 @@ public class HashMapStoreToDisk {
         long startTime = Instant.now().toEpochMilli();
         hashMapStoreToDisk.storeHashMap();
         System.out.println("Time Taken MilliSec: " + (Instant.now().toEpochMilli() - startTime));
+        startTime = Instant.now().toEpochMilli();
+        ObjectSerializer.writeObject(hashMapStoreToDisk.map);
+        System.out.println(ObjectSerializer.readObject(hashMapStoreToDisk.map).size());
+        System.out.println("Time Taken MilliSec: " + (Instant.now().toEpochMilli() - startTime));
     }
+
 }
