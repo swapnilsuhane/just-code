@@ -1,4 +1,4 @@
-package com.just.code.dsalgo.test;
+package com.just.code.dsalgo.company.ubs;
 
 import java.io.IOException;
 import java.util.*;
