@@ -2,7 +2,7 @@ package com.just.code.dsalgo.graph;
 
 import java.util.*;
 
-public class ConenctedComponents {
+public class ConnectedComponents {
     static Map<Integer, List<Integer>> map = new HashMap<>();
     static Set<Integer> visited = new HashSet<>();
     public static void main(String[] args) {
